@@ -1,4 +1,4 @@
 import server
 from constants import ip
-print(ip)
+print("Please go to " + ip + " to use the interface")
 server.run()
