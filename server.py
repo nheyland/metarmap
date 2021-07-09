@@ -56,7 +56,6 @@ def off():
 @app.route("/")
 @cross_origin()
 def host():
-    constants.ip and print(str("IP is set to -> " + str(constants.ip)))
-    constants.airports and print(
-        str("I found the airports but the list is long so I won't print it"))
+    print("IP is set to -> " + str(constants.ip))
+    print("I found the airports but the list is long so I won't print it")
     return render_template("index.html", serverip=constants.ip)
