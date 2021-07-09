@@ -1,11 +1,9 @@
-from constants import constants
+import constants
 from ap import *
 from flask import Flask, json, render_template, jsonify
 from flask_cors import cross_origin
 app = Flask(__name__, template_folder='site/build',
             static_folder='site/build/static')
-
-constants = constants()
 
 
 def run():

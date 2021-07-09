@@ -1,9 +1,7 @@
 import board
 import neopixel
 import requests as r
-from constants import constants
-
-constants = constants()
+import constants
 
 
 class metarmap:
