@@ -1,6 +1,6 @@
-# HomeStation
+# Metarmap
 
-HomeStation home controller
+MetarMap with a controller
 
 ## Installation
 
