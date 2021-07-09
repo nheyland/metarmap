@@ -1,6 +1,6 @@
 import server
+from ap import metarmap
 
 
-
-
-server.run()
+metarmap().metars()
+# server.run()

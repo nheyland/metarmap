@@ -47,15 +47,15 @@ app = Flask(__name__, template_folder='site/build',
 #     return "<p>success<P>"
 
 
-
 @app.route("/")
 @cross_origin()
 def host():
     ip = "http://192.168.0.33:333"
     return render_template("index.html", serverip=ip)
 
+
 def run():
     app.run(host="0.0.0.0", port=3333)
 
 
-run()
+# run()

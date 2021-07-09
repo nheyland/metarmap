@@ -3,3 +3,4 @@ site/public
 site/src
 site/package-lock.json
 .DS_Store
+test.py
