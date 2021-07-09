@@ -1,0 +1,9 @@
+{
+  "on": true,
+  "brightness": 0.1,
+  "america": true,
+  "loading": false,
+  "metars": true,
+  "metarsIntervalTimeMins": 15,
+  "americaIntervalTimeMins": 60
+}
