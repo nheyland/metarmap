@@ -1,4 +1,4 @@
-from constants import constants
+from boot import constants
 from ap import *
 from flask import Flask, json, render_template, jsonify
 from flask_cors import cross_origin
