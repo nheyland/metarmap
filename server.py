@@ -5,46 +5,46 @@ app = Flask(__name__, template_folder='site/build',
             static_folder='site/build/static')
 
 
-# @app.route("/america")
-# @cross_origin()
-# def america():
-#     metarmap().america()
-#     return "<p>success<P>"
+@app.route("/america")
+@cross_origin()
+def america():
+    metarmap().america()
+    return "<p>success<P>"
 
 
-# @app.route("/metars")
-# @cross_origin()
-# def metar():
-#     metarmap().metars()
-#     return "<p>success<P>"
+@app.route("/metars")
+@cross_origin()
+def metar():
+    metarmap().metars()
+    return "<p>success<P>"
 
 
-# @app.route("/red")
-# @cross_origin()
-# def red():
-#     metarmap().red()
-#     return "<p>success<P>"
+@app.route("/red")
+@cross_origin()
+def red():
+    metarmap().red()
+    return "<p>success<P>"
 
 
-# @app.route("/blue")
-# @cross_origin()
-# def blue():
-#     metarmap().blue()
-#     return "<p>success<P>"
+@app.route("/blue")
+@cross_origin()
+def blue():
+    metarmap().blue()
+    return "<p>success<P>"
 
 
-# @app.route("/green")
-# @cross_origin()
-# def green():
-#     metarmap().green()
-#     return "<p>success<P>"
+@app.route("/green")
+@cross_origin()
+def green():
+    metarmap().green()
+    return "<p>success<P>"
 
 
-# @app.route("/off")
-# @cross_origin()
-# def off():
-#     metarmap().clear()
-#     return "<p>success<P>"
+@app.route("/off")
+@cross_origin()
+def off():
+    metarmap().clear()
+    return "<p>success<P>"
 
 
 @app.route("/")

@@ -1,5 +1,5 @@
-# import board
-# import neopixel
+import board
+import neopixel
 import requests as r
 from get import data
 
@@ -20,9 +20,8 @@ class metarmap:
             except:
                 outcome["fail"] = outcome["fail"] + 1
         outcome["hits"] = outcome["success"] + outcome["fail"]
-        self.np = {}
-        # self.np = neopixel.NeoPixel(board.D18, len(self.airports), brightness=self.brightness,
-        #                             auto_write=True, pixel_order=neopixel.GRB)
+        self.np = neopixel.NeoPixel(board.D18, len(self.airports), brightness=self.brightness,
+                                    auto_write=True, pixel_order=neopixel.GRB)
 
     def america(self):
         print("################### RUNNING AMERICA ###################")
@@ -37,23 +36,25 @@ class metarmap:
                 self.np[i] = (255, 255, 255)
             else:
                 self.np[i] = (255, 0, 0)
-
-    def metars(self):
-        colors = {
+        self.colors = {
             "VFR": (0, 255, 0),
             "MVFR": (0, 0, 255),
             "IFR": (255, 0, 0),
             "LIFR": (255, 20, 147),
             "Failed": (0, 255, 255)
         }
+
+    def metars(self):
+
         print("################### RUNNING METARS ###################")
         for index, airport in enumerate(self.airports):
             try:
-                print(colors[self.data[airport]["flight_category"]])
-                print(index)
+
+                self.np[index] = self.colors[self.data[airport]
+                                             ["flight_category"]]
             except:
-                print(colors["Failed"])
-                print(index)
+                self.np[index] = self.colors["Failed"]
+        print(self.np)
 
     def red(self):
         self.np.fill((255, 0, 0))
@@ -68,7 +69,6 @@ class metarmap:
         self.np.fill((0, 0, 0))
 
     def loading(self):
-
         for i in range(0, self.num_leds, 1):
             self.np[i] = (255, 0, 0)
         for i in range(self.num_leds, 0, -1):
