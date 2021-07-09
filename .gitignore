@@ -1,0 +1,4 @@
+site/node_modules
+site/public
+site/src
+site/package-lock.json

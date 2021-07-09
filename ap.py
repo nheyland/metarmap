@@ -1,8 +1,5 @@
-import board
-import time
-import neopixel
-from os import nice
-from time import time
+# import board
+# import neopixel
 import requests as r
 
 
