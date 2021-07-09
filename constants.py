@@ -1,5 +1,8 @@
 import socket
-print(socket.gethostbyname_ex(socket.gethostname())[-1])
+s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+s.connect(("8.8.8.8", 80))
+print(s.getsockname()[0])
+s.close()
 
 ip = "http://192.168.0.33:3333"
 airports = ["KRBG", "KLMT", "KMFR", "KFOT", "KUKI", "KMOD", "KKIC", "KSBA", "KSAN", "KNYL", "KSDM", "MMLT", "MMSD", "MMLP", "MMSL", "MMSL", "MMLM", "MMCN", "MMGM", "MMHO", "E63", "KTUS", "KFHU", "MMCU", "KELP", "KSVC", "KALM", "KSJN", "KPHX", "KLGF", "KSEE", "KSNA", "KTRM", "KBLH", "KIGM", "KFLG", "KGUP", "KPGA", "KCDC", "KSGU", "KLAS", "KBYS", "KVGT", "KTPH", "KBFL", "KWJF", "KSBD", "KLAX", "KOXR", "KSMX", "KFAT", "KBIH", "KTVL", "KMRY", "KSFO", "KSTS", "KSAC", "KRDD", "KSVE", "KRNO", "KWMC", "KLKV", "KBNO", "KBDN", "KONP", "KEUG", "KPDX", "KAST", "KHQM", "KSEA", "KPAE", "KBVS", "S52", "KMWH", "KOMK", "KEPH", "KPSC", "KLGD", "KONO", "KBOI", "KSUN", "KMUO", "KTWF", "KPIH", "KIDA", "KDLN", "KJAC", "KLGU", "KSLC", "KENV", "KEKO", "05U", "KELY", "41U", "KGJT", "KHDN", "KVEL", "KRKS", "KRIW", "KCOD", "KBZN", "KHLN", "KMSO", "KGIC", "KLWS", "KSFF", "KSZT", "KGPI", "KCTB", "KGTF", "KHVR", "M75", "KGGW", "KSDY", "KMLS", "00U", "KBIL", "KBYG", "KGCC", "KCPR", "KCYS", "KDEN", "KCOS", "KASE", "KDRO", "KFMN ", "KABQ", "KGCK", "KIML", "KSNY", "KVTN", "KPIR", "KRAP", "KHEI", "KMOT", "KBIS", "KABR", "KMHE", "KGRI", "KGBD", "KDDC", "KWWR", "KICT", "KMHK", "KLNK", "KOMA", "KFOD", "KMDS", "KATY", "KMML", "KFAR", "KGFK", "KBJI", "KGPZ", "KBRD", "KSTC", "KMSP", "KRST", "KALO", "KDSM", "KCID", "KMSN", "KCWA", "KRHI", "CYQT", "KDLH", "KEAU", "KOSH", "KGRB", "KSAW", "KCMX", "KISQ", "KPLN",
