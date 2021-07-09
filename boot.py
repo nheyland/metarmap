@@ -1,4 +1,5 @@
-from server import *
+from server import run
+
 run()
 
 
