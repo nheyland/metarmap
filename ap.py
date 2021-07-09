@@ -1,6 +1,5 @@
 import board
 import neopixel
-import requests as r
 import constants
 
 
@@ -52,7 +51,6 @@ class metarmap:
                                              ["flight_category"]]
             except:
                 self.np[index] = self.colors["Failed"]
-        print(self.np)
 
     def red(self):
         print("################### RUNNING RED ###################")
