@@ -48,7 +48,6 @@ class metarmap:
         print("################### RUNNING METARS ###################")
         for index, airport in enumerate(self.airports):
             try:
-
                 self.np[index] = self.colors[self.data[airport]
                                              ["flight_category"]]
             except:
@@ -56,22 +55,22 @@ class metarmap:
         print(self.np)
 
     def red(self):
+        print("################### RUNNING RED ###################")
+
         self.np.fill((255, 0, 0))
 
     def blue(self):
+        print("################### RUNNING BLUE ###################")
         self.np.fill((0, 0, 255))
 
     def green(self):
+        print("################### RUNNING GREEN ###################")
+
         self.np.fill((0, 255, 0))
 
     def clear(self):
+        print("################### TURNING OFF ###################")
         self.np.fill((0, 0, 0))
-
-    def loading(self):
-        for i in range(0, self.num_leds, 1):
-            self.np[i] = (255, 0, 0)
-        for i in range(self.num_leds, 0, -1):
-            self.np[i] = (52, 107, 235)
 
     def __repr__(self):
         return str('Unsurpported')
