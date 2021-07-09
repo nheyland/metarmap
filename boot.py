@@ -1,5 +1,6 @@
-import server
-server.run()
+from server import *
+run()
+
 
 class constants:
     def __init__(self) -> None:
