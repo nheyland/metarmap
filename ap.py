@@ -13,6 +13,13 @@ class metarmap:
         self.data = data()
         self.outcome = outcome = {"success": 0,
                                   "fail": 0, "targets": len(self.airports)}
+        self.colors = {
+            "VFR": (0, 255, 0),
+            "MVFR": (0, 0, 255),
+            "IFR": (255, 0, 0),
+            "LIFR": (255, 20, 147),
+            "Failed": (0, 255, 255)
+        }
         for airport in self.airports:
             try:
                 self.data[airport]
@@ -36,16 +43,8 @@ class metarmap:
                 self.np[i] = (255, 255, 255)
             else:
                 self.np[i] = (255, 0, 0)
-        self.colors = {
-            "VFR": (0, 255, 0),
-            "MVFR": (0, 0, 255),
-            "IFR": (255, 0, 0),
-            "LIFR": (255, 20, 147),
-            "Failed": (0, 255, 255)
-        }
 
     def metars(self):
-
         print("################### RUNNING METARS ###################")
         for index, airport in enumerate(self.airports):
             try:
