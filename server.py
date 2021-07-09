@@ -1,4 +1,3 @@
-from smarthome import Plug
 from ap import *
 from flask import jsonify, Flask, request
 from flask_cors import cross_origin
