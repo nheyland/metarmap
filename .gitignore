@@ -2,5 +2,7 @@ site/node_modules
 site/public
 site/src
 site/package-lock.json
+site/package.json
+site/.DS_Store
 .DS_Store
 test.py
