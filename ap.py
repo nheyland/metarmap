@@ -68,3 +68,7 @@ class metarmap:
     def clear(self):
         print("################### TURNING OFF ###################")
         self.np.fill((0, 0, 0))
+
+    def testAmount(self, num):
+        for i in range(0, num, 1):
+            self.np[i] = (0, 0, 255)
