@@ -1,3 +1,4 @@
+from ap import metarmap
 import constants
 from ap import *
 from flask import Flask, json, render_template, jsonify
@@ -50,6 +51,13 @@ def green():
 @cross_origin()
 def off():
     metarmap().clear()
+    return jsonify({"status": "success"})
+
+
+@app.route("/testAmount/<num>")
+@cross_origin()
+def testAmountamount(num):
+    metarmap().testAmount(num)
     return jsonify({"status": "success"})
 
 
