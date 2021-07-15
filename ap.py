@@ -5,7 +5,7 @@ import constants
 
 class metarmap:
     def __init__(self):
-        self.airports = constants.airports
+        self.airports = constants.getter()
         self.num_leds = 346
         self.brightness = 0.1
         self.outcome = outcome = {"success": 0,

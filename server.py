@@ -1,7 +1,6 @@
 from ap import metarmap
 import constants
-from ap import *
-from flask import Flask, json, render_template, jsonify
+from flask import Flask, json, render_template, jsonify, request
 from flask_cors import cross_origin
 app = Flask(__name__, template_folder='site/build',
             static_folder='site/build/static')
@@ -58,6 +57,14 @@ def off():
 @cross_origin()
 def testAmountamount(num):
     metarmap().testAmount(int(num))
+    return jsonify({"status": "success"})
+
+
+@app.route("/setAirports", methods=["POST"])
+@cross_origin()
+def airportsGetter():
+    data = request.get_json()
+    constants.setter(data)
     return jsonify({"status": "success"})
 
 
