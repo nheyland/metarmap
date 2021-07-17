@@ -71,7 +71,8 @@ class metarmap:
 
     def testAmount(self, num):
         self.np.fill((255, 0, 0))
-        # for i in range(0, num, 1):
-        #     self.np[i] = (0, 0, 255)
+
+        for i in range(0, num-1, 1):
+            self.np[i] = (0, 0, 255)
         # for i in range(num, self.num_leds, 1):
         #     self.np[i] = (0, 255, 0)
