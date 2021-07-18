@@ -1,12 +1,13 @@
 import board
 import neopixel
 import constants
+from get import data
 
 
 class metarmap:
     def __init__(self):
         self.airports = constants.getter()
-        self.num_leds = 346
+        self.num_leds = len(self.airports)
         self.brightness = 0.1
         self.outcome = outcome = {"success": 0,
                                   "fail": 0, "targets": len(self.airports)}
@@ -42,7 +43,6 @@ class metarmap:
                 self.np[i] = (255, 0, 0)
 
     def metars(self):
-        from get import data
         print("################### RUNNING METARS ###################")
         data = data()
         for index, airport in enumerate(self.airports):
@@ -71,9 +71,5 @@ class metarmap:
 
     def testAmount(self, num):
         self.np.fill((0, 0, 255))
-
-        # for i in range(0, num):
-        #     self.np[i] = (0, 255, 0)
-        # print(self.np)
-        # for i in range(num, self.num_leds, 1):
-        #      self.np[i] = (0, 255, 0)
+        for i in range(0, num):
+            self.np[i] = (0, 255, 0)
