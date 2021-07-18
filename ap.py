@@ -1,6 +1,5 @@
 import board
 import neopixel
-from server import testAmountamount
 import constants
 
 
@@ -76,6 +75,3 @@ class metarmap:
         print(self.np)
         # for i in range(num, self.num_leds, 1):
         #     self.np[i] = (0, 255, 0)
-
-
-metarmap().testAmount(10)
