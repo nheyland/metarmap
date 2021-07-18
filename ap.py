@@ -1,7 +1,6 @@
 import board
 import neopixel
 import constants
-from get import data
 
 
 class metarmap:
@@ -43,6 +42,7 @@ class metarmap:
                 self.np[i] = (255, 0, 0)
 
     def metars(self):
+        from get import data
         print("################### RUNNING METARS ###################")
         data = data()
         for index, airport in enumerate(self.airports):
