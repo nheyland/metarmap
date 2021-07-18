@@ -56,7 +56,7 @@ def off():
 @app.route("/testAmount/<num>")
 @cross_origin()
 def testAmount(num):
-    # metarmap().testAmount(int(num))
+    metarmap().testAmount(int(num))
     return jsonify({"status": "success"})
 
 
