@@ -24,7 +24,7 @@ class metarmap:
             except:
                 outcome["fail"] = outcome["fail"] + 1
         outcome["hits"] = outcome["success"] + outcome["fail"]
-        self.np = neopixel.NeoPixel(board.D18, len(self.airports), brightness=self.brightness,
+        self.np = neopixel.NeoPixel(board.D18, len(self.num_leds), brightness=self.brightness,
                                     auto_write=True, pixel_order=neopixel.GRB)
 
     def america(self):
