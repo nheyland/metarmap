@@ -25,6 +25,8 @@ def getter():
         airports_csv = f.read()
         airports_list = airports_csv.split(", ")
         airport_return = airports_list[:-1]
+        print('Running Custom File')
         return airport_return
     except:
+        print('Running Defaults')
         return backup
